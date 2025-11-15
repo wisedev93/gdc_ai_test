@@ -84,7 +84,7 @@ export function generateDiaryEntry(transcription: string, placeName?: string): P
            \n\n 음성 기록: "${transcription}"`;
         const response = await ai.models.generateContent({
             model: 'gemini-2.5-flash',
-            contents: prompt
+            contents: prompt,
              config: {  temperature: 0.5, // 일관성을 높임 
 											 maxOutputTokens: 100, // 응답 길이를 최대 100 토큰으로 제한 
 											 topK: 40, // 40개의 가장 확률 높은 토큰만 고려 },
